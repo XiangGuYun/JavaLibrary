@@ -1,4 +1,4 @@
-<%@ page language="java" import="java.util.*" pageEncoding="ISO-8859-1"%>
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
@@ -23,6 +23,30 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   </head>
   
   <body>
-    This is reg JSP page. <br>
+    <h1>用户注册</h1>
+    <hr>
+    <form name="regForm" action="http://localhost:8080/Imooc/JavaMeetHtml_JSP/case3_jsp_buildin_object/Case3_request.jsp" method="post">
+    	 <table>
+    		<tr>
+    			<td>用户名：</td>
+    			<td><input type="text" name="username"></td>
+    		</tr>
+    		<tr>
+    			<td>爱好：</td>
+    			<td>
+    				<input type="checkbox" name="favorite" value="read">读书
+    				<input type="checkbox" name="favorite" value="yang_hua">养花
+    				<input type="checkbox" name="favorite" value="movie">电影
+    				<input type="checkbox" name="favorite" value="plant_tree">种树
+    			</td>
+    		</tr>
+    		<tr>
+    			<td colspan="1"><input type="submit" value="提交"></td> 
+    		</tr>
+    	 </table>	
+    </form>
+    <br>
+    <br>
+    <a href="http://localhost:8080/Imooc/JavaMeetHtml_JSP/case3_jsp_buildin_object/Case3_request.jsp?username=tom">测试URL传递参数</a>
   </body>
 </html>
